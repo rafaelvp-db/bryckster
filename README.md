@@ -7,7 +7,7 @@ A simple Python CLI tool to convert notebooks from Jupyter to Databricks Noteboo
 ```git clone https://github.com/rafaelvp-db/bryckster.git```
 
 * Create a virtual environment and install requirements:
-```
+```bash
 python -m venv .venv && source .venv/bin/activate && \
 pip install --upgrade pip && pip install -r requirements.txt
 ```
