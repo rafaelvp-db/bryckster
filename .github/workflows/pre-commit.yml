@@ -18,3 +18,9 @@ jobs:
         pip install -r requirements.txt
         python bryckster.py run --input_path jupyter --output_path databricks
         rm jupyter/*.ipynb
+    - name: Commit
+      run: |
+        git add jupyter
+        git add databricks
+        git commit -m "Convert to Databricks"
+        git push origin main
