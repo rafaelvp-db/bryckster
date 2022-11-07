@@ -29,7 +29,7 @@ class Converter(object):
                 jupyter_dict = json.loads(jupyter_str)
 
             target_output = self._convert(jupyter_dict)
-            file_name = ipynb.split("/")[-1].replace("ipynb", "")
+            file_name = ipynb.split("/")[-1].replace(".ipynb", "")
 
             with open(os.path.join(output_path, f"{file_name}.py"), "w") as output:
                 output.write(target_output)
