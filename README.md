@@ -19,7 +19,14 @@ python bryckster.py run \
     --output_path DATABRICKS_NOTEBOOKS_FOLDER
 ```
 
-## Tips & Tricks
+## Github Actions
+
+* This repo has been setup in a way that it showcases the following example:
+    * Jupyter notebooks are stored in the `jupyter` folder
+    * A CICD pipeline looks into the `jupyter` folder and converts all of them into Databricks format, outputs them into the `databricks` folder
+    * As a last step, input `.ipynb` files are removed
+    * To give it a try, you can fork this repo and add `ipynb` files into the Jupyter folder. Once you commit, Github Actions will run the steps above.
+## Other Tips & Tricks
 
 * It is possible to import **Jupyter Notebooks** directly into a **Databricks Workspace** and have them converted automatically.
 * However, when using Repos integration the conversion does not work out of the box.
