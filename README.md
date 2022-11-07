@@ -11,3 +11,9 @@ A simple Python CLI tool to convert notebooks from Jupyter to Databricks Noteboo
 
 * Open a terminal and run:
 ```python bryckster.py run --input_path JUPYTER_NOTEBOOKS_FOLDER --output_path DATABRICKS_NOTEBOOKS_FOLDER```
+
+## Tips & Tricks
+
+* It is possible to import **Jupyter Notebooks** directly into a **Databricks Workspace** and have them converted automatically.
+* However, when using Repos integration the conversion does not work out of the box.
+* You can add `bryckster` as a step in your CICD pipeline, so that whenever someone pushes an `.ipynb` into your repo, it gets converted to the format expected by Databricks.
