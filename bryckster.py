@@ -5,7 +5,7 @@ import glob
 import os
 
 class Converter(object):
-    """A simple calculator class."""
+    """A simple converter class."""
 
     def _convert(self, jupyter_dict):
 
