@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
 
+env:
+  NAME: 'github-actions[bot]'
+  EMAIL: 'github-actions[bot]@users.noreply.github.com'
+
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
@@ -20,6 +24,8 @@ jobs:
         rm jupyter/*.ipynb
     - name: Commit
       run: |
+        git config --global user.email "$EMAIL"
+        git config --global user.name "$NAME"
         git add jupyter
         git add databricks
         git commit -m "Convert to Databricks"
