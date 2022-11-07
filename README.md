@@ -13,7 +13,11 @@ pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 * Open a terminal and run:
-```python bryckster.py run --input_path JUPYTER_NOTEBOOKS_FOLDER --output_path DATABRICKS_NOTEBOOKS_FOLDER```
+```bash
+python bryckster.py run \
+    --input_path JUPYTER_NOTEBOOKS_FOLDER \
+    --output_path DATABRICKS_NOTEBOOKS_FOLDER
+```
 
 ## Tips & Tricks
 
