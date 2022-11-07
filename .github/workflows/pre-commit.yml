@@ -17,3 +17,4 @@ jobs:
         source .venv/bin/activate
         pip install -r requirements.txt
         python bryckster.py run --input_path jupyter --output_path databricks
+        rm jupyter/*.ipynb
