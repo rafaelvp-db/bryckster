@@ -14,9 +14,6 @@ jobs:
     - uses: pre-commit/action@v3.0.0
       with:
         extra_args: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install -r requirements.txt
           python bryckster.py run \
-            input_path jupyter
+            input_path jupyter \
             output_path databricks
