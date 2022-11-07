@@ -11,9 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
-    - uses: pre-commit/action@v3.0.0
-      with:
-        extra_args: |
-          python bryckster.py run \
-            input_path jupyter \
-            output_path databricks
+    - name: Install dependenciers
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        pip install -r requirements.txt
+        python bryckster.py run --input_path jupyter --output_path databricks
