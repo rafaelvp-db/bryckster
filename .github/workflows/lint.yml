@@ -23,7 +23,6 @@ jobs:
         source .venv/bin/activate
         pip install -r requirements.txt
         python bryckster.py run --input_path $INPUT --output_path $OUTPUT
-        rm jupyter/*.ipynb
         echo "Please check Databricks notebook output in $OUTPUT" > jupyter/output.ok
     - name: Commit
       run: |
